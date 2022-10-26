@@ -1,9 +1,5 @@
 // Script para convertir números decimales a romanos
 
-let numRomano = convertir()
-document.getElementById("resultados").innerText = numRomano
-
-
 function convertir(){
     // Leemos el campo del input y llamamos a convertir()
     let numDecimal = document.getElementById("myInputA").valueAsNumber
@@ -21,7 +17,9 @@ function convertir(){
     // Recibe número decimal entero
     
     // Equivalencia con símbolos en numeración romana
+    
     // Ordenación y eliminación de símbolos no necesarios
+    
     document.getElementById("resultados").innerText = numDecimal
 }
 
@@ -61,6 +59,28 @@ else { return NaN } //opcional
     function descomponer(num){
         //        [M, C, D, U]  
         let arr = [0, 0, 0, 0]
-        // algoritmo
+        
+    //Abordas casos en los que recibimos 1, 2 o 3 dígitos 
+        // Usando srt.length determinamos si le faltan ceros al num
+            // añadimos los ceros a la izq
+            
+    // Algoritmo
+        /* 0. Recibimos número num
+         * 1. Cambiamos a tipo string -> String(num)
+         * 2. Asignamos a cada posición del array el carácter correspondiente
+         * 2.5 Cambiamos el tipo a Number
+         */
+    let numStr = String(num)
+    let len = numStr.length // 1, 2, 3 o 4
+    if( len === 1)      { numStr = '000' + numStr }
+    else if (len === 2) { numStr = '00' + numStr }
+    else if (len === 3) { numStr = '0' + numStr }
+
+    // Estas asignaciones funcionan cuando son 4 dígitos 
+    arr[0] = Number(numStr[0])
+    arr[1] = Number(numStr[1])
+    arr[2] = Number(numStr[2])
+    arr[3] = Number(numStr[3])
+        
         return arr
     }

@@ -105,6 +105,7 @@ ul {
 
 #resultados {
     font-size: 3em;
-    line-height: 100%;
+    display: inline-block;
+    align-self: center;
     background-color: rgba(128, 247, 48, 0.315)!important;
 }
