@@ -7,7 +7,7 @@ body, html {
     margin: 0;
 }
 body {
-    background-color: rgba(16, 214, 214, 0.505);
+    background-color: rgba(168, 184, 186, 0.505);
     padding: 10px;
     font-family: 'Roboto', sans-serif;
 }
@@ -22,7 +22,7 @@ h1 {
     text-align: center;
 }
 h1, h2, h3 {
-    color: #902926;
+    color: #46810e;
     /* color: rgb(104, 55, 55); */
 }
 ul {
@@ -45,12 +45,12 @@ ul {
     justify-content: space-around;
 }
 #conversor-container div {
-    border: 2px solid brown;
+    border: 3px solid rgb(33, 51, 189);
     padding: 10px;
     border-radius: 10px;
 }
 
-/* Calculadora con botones */
+
 #conversor-container {
     display: flex;
     justify-content: center;
@@ -61,12 +61,12 @@ ul {
     font-size: 1.2em;
     padding: 0px 10px;
     margin: 0px 0px;
-    background-color: lightgray;
+    background-color: rgb(130, 121, 121);
 }
 #conversor-container div {
+    background-color: rgba(142, 201, 237, 0.865);
     max-width: 50vw;
     margin: 0 auto;
-    background-color: rgba(222, 184, 135, 0.865);
 }
 #conversor-container p,
 #conversor-container div,
@@ -76,7 +76,7 @@ ul {
     display: block;
     margin: 10px auto;
     width: 95%;
-    min-height: 1.25em; /* cambiado a 1.25em para mejor centrado del <p> */
+    min-height: 1.75em;
     padding: 3px 0;
     text-align: center;
 }
@@ -95,22 +95,16 @@ ul {
     padding: 15px 5px;
 }
 #conversor-btn {
-    background-color: rgba(33, 33, 164, 0.89);
+    background-color: rgba(19, 19, 180, 0.89);
     color: white;
     box-shadow: 0;
     border: 0;
     border-radius: 5px;
     margin: 20px auto 10px;
 }
-#resultados-div {
-    background-color: rgb(233, 229, 229)!important;
-    color: black;
-    /* max-height: 1.5em; */
-}
 
-/* <p> */
 #resultados {
     font-size: 3em;
-    display: inline-block;
-    align-self: center;
+    line-height: 100%;
+    background-color: rgba(128, 247, 48, 0.315)!important;
 }
