@@ -32,31 +32,44 @@ function calc(){
         // Llamar a la fn seleccionada
         if(posicion === 0 ){
             let res = suma(numA, numB)
+            escribirResultado(res)
             console.log("Suma: " + res)
         } else if( posicion === 1){
             let res = resta(numA, numB)
+            escribirResultado(res)
             console.log("Resta: " + res)
         } else if( posicion === 2){
             let res = producto(numA, numB)
+            escribirResultado(res)
             console.log("Producto: " + res)
         } else if( posicion === 3){
             let res = division(numA, numB)
+            escribirResultado(res)
             console.log("División: " + res)
         } else if( posicion === 4){
             let res = raizCuadrada(numA, numB)
+            escribirResultado(res)
             console.log("Raíz cuadrada: " + res)
         } else if( posicion === 5){
             let res = potencia(numA, numB)
+            escribirResultado(res)
             console.log("Potencia: " + res)
         } else{
             let res = log10(numA)
+            escribirResultado(res)
             console.log("Logaritmo: " + res)
         } 
     
         // Escribir resultado en textarea
-     
+
     
-    }        
+    }  
+
+// Fn para escribir un dato en el textarea
+function escribirResultado(num){
+    let textarea = document.getElementById("resultados")
+    textarea.innerText = String(num)
+}
 // Funciones para operaciones básicas + - * / ** % sqrt() log() 
 // Suma 
 function suma(a, b){
