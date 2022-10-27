@@ -61,10 +61,10 @@ ul {
     font-size: 1.2em;
     padding: 0px 10px;
     margin: 0px 0px;
-    background-color: rgb(130, 121, 121);
+    background-color: rgb(143, 136, 136);
 }
 #conversor-container div {
-    background-color: rgba(142, 201, 237, 0.865);
+    background-color: rgba(152, 192, 218, 0.865);
     max-width: 400px;
     width: 300px;
     margin: 0 auto;
@@ -115,10 +115,9 @@ ul {
     padding: 10px;
 }
 
-#resultados div {
-    display: inline-block;
-    align-self: center;
-    background-color: rgba(128, 247, 48, 0.315)!important;
+#resultados-div {
+    background-color: #c2ff89!important;
+    color:black;
 }
 
 /* Fracciones -> estilos <hr> e inputs */
