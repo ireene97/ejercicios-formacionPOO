@@ -65,7 +65,8 @@ ul {
 }
 #conversor-container div {
     background-color: rgba(142, 201, 237, 0.865);
-    max-width: 50vw;
+    max-width: 400px;
+    width: 300px;
     margin: 0 auto;
 }
 #conversor-container p,
@@ -74,14 +75,23 @@ ul {
 #conversor-container select,
 #conversor-btn {
     display: block;
-    margin: 10px auto;
-    width: 95%;
-    min-height: 1.75em;
+    margin: 20px auto;
+    width: 90%;
+    min-height: 1.25em;
     padding: 3px 0;
     text-align: center;
 }
+#conversor-container label{
+    padding: 10px 0;
+    display: block;
+    margin: 30px 0 10px;
+}
+
+
 #conversor-container input {
-    padding: 0;
+    padding: 5px 0;
+    font-size: 1em;
+    width: 50%;
 }
 #conversor-container textarea {
     display: block;
@@ -100,29 +110,74 @@ ul {
     box-shadow: 0;
     border: 0;
     border-radius: 5px;
-    margin: 20px auto 10px;
+    margin: 50px auto 10px;
     width: 50%;
     padding: 10px;
 }
 
-#resultados {
-    font-size: 3em;
+#resultados div {
     display: inline-block;
     align-self: center;
     background-color: rgba(128, 247, 48, 0.315)!important;
 }
 
+/* Fracciones -> estilos <hr> e inputs */
+hr {
+    width: 50%;
+    margin: 0 auto;
+    border: 1px solid rgb(83, 83, 83);
+    background-color: rgb(83, 83, 83);;
+}
+#conversor-container input {
+    margin: 5px auto;
+}
+
+#conversor-container select {
+    width: 50%;
+    height: 2em;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+#borrar-btn {
+    padding: 5px;
+    width: 50%;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: lightgray;
+    border: 0;
+    border-radius: 5px;
+}
+#borrar-span {
+    padding: 0 0 0 10px;
+    line-height: 100%;
+    height: 100%;
+    display: inline-block;
+    align-self: center;
+    border: 0px solid black;
+}
+
+/* <p> */
+#resultados {
+    font-size: 3em;
+    display: inline-block;
+    align-self: center;
+}
+
 /* Media Query */
 
 @media (width > 800px){
-    #conversor-container div{
+    #conversor-container div {
         max-width: 450px;
         padding: 15px;
     }
 }
-
 @media (width < 800px){
-    #resultados{
+    #resultados {
         font-size: 2em;
     }
 }

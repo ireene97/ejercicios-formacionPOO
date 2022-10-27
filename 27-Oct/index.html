@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="style.css">
     <title>Conversor de Fracciones a Números Decimales</title>
 </head>
@@ -15,18 +16,43 @@
     <h1>Conversor de Fracciones a Números Decimales</h1>
     <main>
         <div id="conversor-container">
-            <p>Para comprobar las salidas ingresa <code>100</code>, <code>900</code>, <code>2022</code> y <code>121</code>.</p>
-            <p>Este conversor solo admite números del <code>1</code> al <code>3999</code>.</p>
+            <p>Prueba a convertir fracciones como <code>1 / 2</code>, <code>2 / 3</code>, etc.</p>
+            <!--<p>Descripción 2</p>-->
             <div id="resultados-wrapper">
-                <label for="resultados">Número en representación romana:</label>
+                <label for="resultados">Fracción en representación decimal:</label>
                 <div id="resultados-div">
                     <p id="resultados"></p>
                 </div>
 
-                <label for="myInputA">Introduce el número en base 10 a convertir:</label>
-                <input id="myInputA" type="number" placeholder="Introduce un número...">
+                <label for="decimales">Elije el número de decimales para el resultado:</label>
+                <select id="decimales">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3" selected>3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+                <label for="myInputA">Introduce los valores de la fracción:</label>
+                <input id="myInputA" type="number"  placeholder="numerador">
+                <hr>
+                <input id="myInputB" type="number"  placeholder="denominador">
 
-                <button id="conversor-btn" onclick="convertir()">Convertir</button>  
+                <button id="borrar-btn" onclick="borrar()">
+                    <span class="material-symbols-outlined">
+                        delete
+                        </span>  
+                        <span id="borrar-span">Borrar</span> 
+                </button>
+                <!-- Añadimos botón para borrar todos los campos -> resultado y los inputs -->
+                <button id="conversor-btn" onclick="convertir()">Convertir fracción</button>  
             </div>
         </div>
     </main>
