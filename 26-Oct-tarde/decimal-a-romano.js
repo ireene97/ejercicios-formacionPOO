@@ -43,6 +43,55 @@ else if (num === 1000 ) { return "M" }
 else { return NaN } //opcional
 }
 
+// Fn que procesa el array del número
+// Recibe array de descomponer(num) -> [1, 9, 8, 9]
+// Devuelve string de caracteres
+function procesarArray(arr) {
+    let char0, char1, char2, char3;
+    let str;
+
+    char0 = String(arr[0])
+    char1 = String(arr[1])
+    char2 = String(arr[2])
+    char3 = String(arr[3])
+
+    let milRom = simboloRomano(1000)
+    let quinientosRom = simboloRomano(500)
+    let cienRom = simboloRomano(100)
+    let cincuentaRom = simboloRomano(50)
+    let diezRom = simboloRomano(10)
+    let cincoRom = simboloRomano(5)
+    let unoRom = simboloRomano(1)
+    // -- Repetir para cada char -- 
+    // Si es cero -> nada  -> ""
+
+    // Miles: 0, 1, 2, 3
+    if( char0 == 0){ char0 = "" }                           // "" 
+    else if( char0 == 1){char0 = milRom }                   // M
+    else if( char0 == 2){char0 = milRom.repeat(2) }         // MM   
+    else if( char0 == 3){char0 = milRom.repeat(3) }         // MMM
+
+    // Centenas: 0, 1, ..., 9
+    if( char1 == 0 ){char1 = ""}
+    else if( char1 >= 1 & char1 <=3 ){ char1 = cienRom.repeat(char1)}   // C, CC, CCC
+    else if( char1 ==4 ){ char1 = cienRom + quinientosRom}         // CD
+    else if( char1 ==5 ){ char1 = quinientosRom}                             // D
+    else if( char1 >= 6 & char1 <= 8 ){ 
+        char1 = quinientosRom + cienRom.repeat(Number(char1) - 5)  // 6 DC, 7 DCC, 8 DCCC
+    } else if ( char1 == 9 ){ char1 = cienRom + milRom }   // 9 CM
+
+    // Decenas: 0, 1, ..., 9
+    // Unidades: 0, 1, ..., 9
+
+    //Si es 1, 5, 10, 50, 100, 500, 1000 -> simboloRomano(num)
+    simbolosValidos = [1, 5, 10, 50, 100, 500, 1000]
+
+    // Si es cualquier otro valor, ej. 4, 9...
+        // -> Lógica para pedir 5 - 1 -> IV    o    10 - 1 -> IX
+
+    str = char0 + char1 + char2 + char3;
+    return str;
+}
 // Descomposición del número en sumandos -> 120 -> 100 + 20 -> 1*100 + 2*10
     // Calcula los sumandos de un número determinado -> 1, 10, 100, 1000
 
@@ -71,6 +120,7 @@ else { return NaN } //opcional
          * 2.5 Cambiamos el tipo a Number
          */
     let numStr = String(num)
+
     let len = numStr.length // 1, 2, 3 o 4
     if( len === 1)      { numStr = '000' + numStr }
     else if (len === 2) { numStr = '00' + numStr }

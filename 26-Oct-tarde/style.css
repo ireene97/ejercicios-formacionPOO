@@ -109,3 +109,11 @@ ul {
     align-self: center;
     background-color: rgba(128, 247, 48, 0.315)!important;
 }
+
+/* Media Query */
+
+@media (width > 800px){
+    #conversor-container div{
+        max-width: 450px;
+    }
+}
