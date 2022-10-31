@@ -6,7 +6,8 @@
 // ej4() -- Obj que representa a una cuenta bancaria 
 // ej5() -- Obj ficha de entrenamiento 
 // ej6() -- Objs bus y conductor 
-ej7()
+//ej7()
+ej8()
 
 // Ejercicio 1 - Obj para guardar notas de alumno y método que promedia notas
 // Propiedades: nombre, apellido, ingles, prog, html (asignaturas)
@@ -135,7 +136,7 @@ function ej5(){
     
 }
 
-// Ej 6
+// Ej 6 - Bus y conductor, bajar y subir pasajeros 
 function ej6(){
     let bus = {
         "linea": "Línea 1",
@@ -196,7 +197,7 @@ function ej6(){
     // escribirResultado("Bajan 40", bus.bajar(50));   // 0
 }
 
-// Ej 7 
+// Ej 7 - Artículo y proveedor 
 function ej7(){
    // let articuloPlantilla = {
     //    "nombreProd": "Televisor 4K",
@@ -224,17 +225,27 @@ function ej7(){
         "telefono": function(){
             console.log("Teléfono de " + this.proveedor.nombreProv + " es " + this.proveedor.telefono)
             return {
-                "nombreProv": this.proveedor.nombreProv,
+                "nombreProv": this.proveedor.nombreProv, 
                 "telefonoProveedor": this.proveedor.telefono
             }
+        },
+        "escribirTelefono":function(){
+            return "El teléfono del " + this.proveedor.nombreProv + " es " + this.proveedor.telefono
         }
     }
     // escribirResultado("Datos del Proveedor: ", JSON.stringify(articulo1.telefono()))
     // escribirResultado("Datos del Proveedor: ", "Tlf de " + articulo1.telefono().nombreProv + " es " + articulo1.telefono().telefonoProveedor)
-    let nombre = articulo1.telefono().nombreProv
-    let tlf = articulo1.telefono().telefonoProveedor
     
-    escribirResultado("Datos del Proveedor: ", "Teléfono de " + nombre + " es " + tlf)
+    // let nombre = articulo1.telefono().nombreProv
+    // let tlf = articulo1.telefono().telefonoProveedor
+    // escribirResultado("Datos del Proveedor: ", "Teléfono de " + nombre + " es " + tlf)
+
+    escribirResultado("String formateado en método: ", articulo1.escribirTelefono())
+
+}
+
+// Ej 8 
+function ej8(){
 
 }
 
