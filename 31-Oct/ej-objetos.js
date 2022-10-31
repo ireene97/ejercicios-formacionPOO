@@ -5,7 +5,8 @@
 // ej3() -- Obj para calcular la densidad de la piedra en kg/m3 y en gr/cc 
 // ej4() -- Obj que representa a una cuenta bancaria 
 // ej5() -- Obj ficha de entrenamiento 
-ej6()
+// ej6() -- Objs bus y conductor 
+ej7()
 
 // Ejercicio 1 - Obj para guardar notas de alumno y método que promedia notas
 // Propiedades: nombre, apellido, ingles, prog, html (asignaturas)
@@ -193,6 +194,48 @@ function ej6(){
     // escribirResultado("Bajan 100", bus.bajar(100)); // 0
     // escribirResultado("Suben 35", bus.subir(200))   // 40
     // escribirResultado("Bajan 40", bus.bajar(50));   // 0
+}
+
+// Ej 7 
+function ej7(){
+   // let articuloPlantilla = {
+    //    "nombreProd": "Televisor 4K",
+    //    "precio": 450.00,
+    //    "proveedor":{   
+    //        "nombreProv":"Sharp",
+    //        "email": "sharp@es.com",
+   //         "telefono": "(+34) 656 536 348"
+    //    },
+   //     "telefono": function(){
+    //        return {
+    //            "nombre": this.proveedor.nombreProv,
+    //            "telefono": this.proveedor.telefono
+    //        }
+    //    }
+    //}
+    let articulo1 = {
+        "nombreProd": "Monitor",
+        "precio": 200.00,
+        "proveedor":{   
+            "nombreProv":"TecnoShop",
+            "email": "tcn@tecno.com",
+            "telefono": "(+34) 656 536 348"
+        },
+        "telefono": function(){
+            console.log("Teléfono de " + this.proveedor.nombreProv + " es " + this.proveedor.telefono)
+            return {
+                "nombreProv": this.proveedor.nombreProv,
+                "telefonoProveedor": this.proveedor.telefono
+            }
+        }
+    }
+    // escribirResultado("Datos del Proveedor: ", JSON.stringify(articulo1.telefono()))
+    // escribirResultado("Datos del Proveedor: ", "Tlf de " + articulo1.telefono().nombreProv + " es " + articulo1.telefono().telefonoProveedor)
+    let nombre = articulo1.telefono().nombreProv
+    let tlf = articulo1.telefono().telefonoProveedor
+    
+    escribirResultado("Datos del Proveedor: ", "Teléfono de " + nombre + " es " + tlf)
+
 }
 
 
