@@ -6,8 +6,8 @@
 // ej4() // Obj que representa a una cuenta bancaria 
 // ej5() // Obj ficha de entrenamiento 
 // ej6()// Objs bus y conductor 
- ej7() // Objs Artículo y Proveedor
-// ej8() // Objs Alumnos 
+// ej7() // Objs Artículo y Proveedor
+ ej8() // Objs Alumnos 
 // ej9() // Objs Cliente y Factura 
 
 // Ejercicio 1 - Obj para guardar notas de alumno y método que promedia notas
@@ -488,6 +488,29 @@ function ej7(){
 
 // Ej 8 - Alumnos
 function ej8(){
+    class Alumno{
+        //
+        constructor(
+                    nombre = "Nombre",
+                    apellido = "Apellido por defector",
+                    matricula = 10000,
+                    calificacion = 0.00
+        ){
+            this.nombre = nombre
+            this.apellido = apellido
+            this.matricula = matricula
+            this.calificacion = calificacion
+        }
+        calificar(nota){
+            this.calificacion = nota
+            return this.calificacion
+        }
+        datos(){
+            return "Alumnx: " + this.nombre + ", " + this.apellido + " con matrícula: " + this.matricula + " tiene nota: " + this.calificacion
+        }
+    }
+
+    /* Objs alumno creados por separado (sin clase)
     let alumno1 = {
         "nombre":"María",
         "apellido":"De la Fuente",
@@ -497,7 +520,7 @@ function ej8(){
             this.calificacion = nota
             return this.calificacion
         },
-        "datosAlumno": function(){
+        "datos": function(){
             return "Alumnx " + this.nombre + " " + this.apellido + " con matricula " + this.matricula + "tiene nota: " + this.calificacion
         } 
     }
@@ -510,7 +533,7 @@ function ej8(){
             this.calificacion = nota;
             return this.calificacion;
         },
-        "datosAlumno": function(){
+        "datos": function(){
             return "Alumnx " + this.nombre + " " + this.apellido + " con matrícula " + this.matricula + " tiene nota: " + this.calificacion;
         }
     }
@@ -523,7 +546,7 @@ function ej8(){
             this.calificacion = nota;
             return this.calificacion;
         },
-        "datosAlumno": function(){
+        "datos": function(){
             return "Alumnx " + this.nombre + " " + this.apellido + " con matrícula " + this.matricula + " tiene nota: " + this.calificacion;
         }
     }
@@ -536,27 +559,51 @@ function ej8(){
             this.calificacion = nota;
             return this.calificacion;
         },
-        "datosAlumno": function(){
+        "datos": function(){
             return "Alumnx " + this.nombre + " " + this.apellido + " con matrícula " + this.matricula + " tiene nota: " + this.calificacion;
         }
-    }
+    }*/
 
+    let alumno1 = new Alumno("María", "Pérez", 12345, 6.5)
+    let alumno2 = new Alumno("Pepe", "García", 56789, 8)
+    let alumno3 = new Alumno("Manuel", "Valiente", 58465, 9)
+    let alumno4 = new Alumno("Teresa", "Meneses", 25165, 7)
+    
     // Asignamos notas
-    alumno1.calificar(7)
-    alumno2.calificar(5)
-    alumno3.calificar(8)
-    alumno4.calificar(10)
+    // alumno1.calificar(7)
+    // alumno2.calificar(5)
+    // alumno3.calificar(8)
+    // alumno4.calificar(10)
 
     // Usamos string datos para guardar todas las salidas
-    let datos = alumno1.datosAlumno()
-    datos += "\n" + alumno2.datosAlumno()
-    datos += "\n" + alumno3.datosAlumno()
-    datos += "\n" + alumno4.datosAlumno()
+    let datos = alumno1.datos()
+    datos += "\n\n" + alumno2.datos()
+    datos += "\n\n" + alumno3.datos()
+    datos += "\n\n" + alumno4.datos()
 
     escribirResultado("Notas de los alumnos: ", datos)
 }
+    
 
 function ej9(){
+    class Cliente{
+        //
+        constructor(
+                    nombre = "Nombre",
+                    apellido = "Apellido por defector",
+                    DNI = "",
+                    direccion = "",
+                    email = "",
+                    telefono = ""
+        ){
+            this.nombre = nombre
+            this.apellido = apellido
+            this.DNI = DNI
+            this.direccion = direccion
+            this.email = email
+            this.telefono = telefono
+        }
+    }
     let cliente1 = {
         "nombre": "Juan", 
         "apellido": "Pérez", 
