@@ -7,8 +7,8 @@
 // ej5() // Obj ficha de entrenamiento 
 // ej6()// Objs bus y conductor 
 // ej7() // Objs Artículo y Proveedor
- ej8() // Objs Alumnos 
-// ej9() // Objs Cliente y Factura 
+// ej8() // Objs Alumnos 
+ej9() // Objs Cliente y Factura 
 
 // Ejercicio 1 - Obj para guardar notas de alumno y método que promedia notas
 // Propiedades: nombre, apellido, ingles, prog, html (asignaturas)
@@ -587,23 +587,59 @@ function ej8(){
 
 function ej9(){
     class Cliente{
-        //
         constructor(
-                    nombre = "Nombre",
-                    apellido = "Apellido por defector",
-                    DNI = "",
-                    direccion = "",
-                    email = "",
-                    telefono = ""
+                    nombre = "Cliente",
+                    apellido = "Apellido",
+                    dni = "12345678A",
+                    direccion = "Dirección",
+                    telefono = "+34 656 53 63 48",
+                    email = "email@cliente.com",
         ){
             this.nombre = nombre
             this.apellido = apellido
-            this.DNI = DNI
+            this.dni = dni
             this.direccion = direccion
             this.email = email
             this.telefono = telefono
+            this.whatsapp = "123456789"
         }
     }
+    class Factura {
+        constructor(
+            idCliente = 1, 
+            importeTotal= 0.00,
+            estado = "no emitida"
+            ){
+                this.idCliente = idCliente
+                this.importeTotal = importeTotal
+                this.estado = estado
+                this.clientesArray = [
+                    new Cliente("Pepe", "Pérez", "12345678A", "Calle sin nombre 098", "juan@perez.com", "+34 123456789"),
+                    new Cliente("Carla", "Gómez", "12345589B", "Calle con nombre 100", "ana@perez.com", "586456789"),
+                    new Cliente("Ramiro", "Ramos", "47856985Z", "Av. del Manzanares 123", "maria@perez.com", "001-145-236-789")
+                    /*{"nombre": "Cliente 1", "teléfono": "123"},
+                    {"nombre": "Cliente 1"},
+                    {"nombre": "Cliente 3"}*/
+                ]
+            }
+            pagar(){
+                this.estado = "pagada"
+                return "La factura de " + this.importeTotal + " está '" + this.estado + "'"
+            }
+            imprimir(){
+                this.estado = "pendiente";
+                return "La factura está de " + this.importeTotal + " está '" + this.estado + "'";
+            }
+            datosClienteExt(clienteExt){
+                // Recibimos el cliente desde "fuera" del objeto
+                return "Nombre: " + clienteExt.nombre + ", " + "Apellido: " + clienteExt.apellido;
+            }
+            datosClienteInt(){
+                let clienteInt = this.clientesArray[this.idCliente];
+                return "Nombre: " + clienteInt.nombre + ", " + "Apellido: " + clienteInt.apellido;
+            }
+        }
+    /* Obj cliente 1-3
     let cliente1 = {
         "nombre": "Juan", 
         "apellido": "Pérez", 
@@ -627,9 +663,10 @@ function ej9(){
         "direccion": "Calle sin nombre 098",
         "email": "maria@perez.com",
         "telefono": "+34 123456789"
-    }
-    let arrayClientes = [cliente1, cliente2, cliente3]  // "lista" de clientes
-    // Factura
+    }*/
+    
+    
+    /* Factura
     let factura = {
         "idCliente": 1,       // 0, 1, 2
         "importeTotal": 100,    // Asignamos importe en cada caso
@@ -648,9 +685,19 @@ function ej9(){
             console.table({"idCliente": this.idCliente, "importeTotal": this.importeTotal, "estado": this.estado});
             return "La factura está '" + this.estado + "' de pago.";
         }
-    }
-    escribirResultado("Emitimos factura ", factura.imprimir())
-    // escribirResultado("Pagamos factura: ", factura.pagar())
+    }*/
+    
+    let arrayClientes = 
+    [new Cliente("Pepe", "Pérez","65987452A","Calle sin nombre 098","juan@perez.com","+34 656536348"), 
+    new Cliente("Pablito", "Pérez", "64875421A", "Calle con nombre 100", "ana@perez.com","693548712"), 
+    new Cliente("Carla", "Pérez", "12345678A", "Calle Falsa 123", "maria@perez.com","658-242-321")]  // "lista" de clientes
+
+//escribirResultado("Emitimos factura ", new Factura(0).imprimir())
+//escribirResultado("Emitimos factura ", new Factura(0).datosClienteExt(clientesArray[0]))
+//escribirResultado("Emitimos factura ", new Factura(0).datosClienteInt(clientesArray[0]))
+escribirResultado("Pagamos factura: ", new Factura(0, 300).pagar())
+
+// escribirResultado("Pagamos factura: ", factura.pagar())
 }
 
 
