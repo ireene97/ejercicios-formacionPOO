@@ -1,8 +1,8 @@
 /* Ejercicios con Objetos en JS */
 
-//ej1() -- Obj alumno y método que promedia notas 
- ej2()// -- Obj para calcular el precio neto de un producto
-// ej3() -- Obj para calcular la densidad de la piedra en kg/m3 y en gr/cc 
+// ej1() -- Obj alumno y método que promedia notas 
+// ej2() -- Obj para calcular el precio neto de un producto
+ej3() // -- Obj para calcular la densidad de la piedra en kg/m3 y en gr/cc 
 // ej4() -- Obj que representa a una cuenta bancaria 
 // ej5() -- Obj ficha de entrenamiento 
 // ej6() -- Objs bus y conductor 
@@ -85,7 +85,32 @@ function ej2(){
 
 // Ejercicio 3 - Objeto piedra que tiene masa y volumen a partir de lo cual se calcula la densidad 
 function ej3(){
-    let piedra ={
+    class Piedra{
+        constructor(color = "", 
+                    origen = "", 
+                    materiales = [], 
+                    masaGr = 1, 
+                    masaKg = 1/1000,
+                    volumenCc = 1,
+                    volumenM3 = 1/1000000
+                    )
+        {
+            this.color = color;
+            this.origen = origen;
+            this.materiales = materiales;
+            this.masaGr = masaGr;
+            this.masaKg = masaKg;
+            this.volumenCc = volumenCc;
+            this.volumenM3 = volumenM3;
+        }
+        calcDensidadKgM3(){
+            return (this.masaKg / this.volumenM3).toFixed(5); // kg/m3
+        }
+        calcDensidadGrCc(){
+            return (this.masaGr / this.volumenCc).toFixed(5); // gr/cc
+        }
+    }
+    /*let piedra ={
         "color": "grisáceo",
         "origen": "Islas volcánicas",
         "materiales": ["silicio", "calcio"],
@@ -93,7 +118,7 @@ function ej3(){
         "masaGr": 1.5 * 1000,
         "volumenCc": 1000,
         "volumenM3": 0.001,
-        "calcDensidadKgM3": function(){
+            "calcDensidadKgM3": function(){
         // densidad = masa (kg) / volumen (m3)
             return (this.masaKg / this.volumenM3).toFixed(5)    // kg/m3
         },
@@ -101,9 +126,14 @@ function ej3(){
         // densidad = masa (gr) / volumen (cc)    
             return (this.masaGr / this.volumenCc).toFixed(3)    // gr/cc
         }
-    }
-    // escribirResultado("Densidad en kg/m3: ", piedra.calcDensidadKgM3() + " kg/m3")
-    escribirResultado("Densidad en gr/cc: ", piedra.calcDensidadGrCc() + " gr/cc")
+    }*/
+
+    /* Creamos objetos de clase Piedra */
+    let piedra = new Piedra()
+    let piedra2 = new Piedra("gris", "España", [], 100, 0.1, 30, 0.001)
+
+    escribirResultado("Densidad en kg/m3: ", piedra.calcDensidadKgM3() + " kg/m3")
+    //escribirResultado("Densidad en gr/cc: ", Piedra.calcDensidadGrCc() + " gr/cc")
 }
 
 // Ejercicio 4- Objeto que emula una cuenta de banco con ingresar() y retirar ()
