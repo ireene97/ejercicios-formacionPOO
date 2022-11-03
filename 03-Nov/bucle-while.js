@@ -163,25 +163,59 @@ function ej5(){
         }
 
 
-    // 9. mostramos menú y pedimos número
+    // 9. Mostramos menú y pedimos número
         // Mostramos opción recibida del 1 a la N (según menú)
-        // Cualquier número (en rango) muestra la opción 
-            // Si no está en rango -> ERROR 
-        // N acaba el programa 
-        let el = document.getElementById("ej-8-resultados");
-        const menu = 
-                `Menú:
-                1 - Opción A
-                2 - Opción B
-                3 - Opción C
-                4 - Opción D
-                5 - Fin
-                `
-        let num = 0 
-        do{
-            num = Number(prompt("Ingresa una opción:"));
-        }while( num > 0 && num < 5 )
-        el.innerText = ""
-    // 10. Pedimos número hasta recibir un 0 
-        // Si suma par (0 cuenta como par) -> repite 
-        // Si suma impar -> acaba el programa
+        // Cualquier número (en rango) muestra la opción
+            // Si no está en rango -> ERROR
+        // N acaba el programa -> N es 5
+        function ej9(){
+            let el = document.getElementById("ej-9-resultados");
+            const menu = 
+                    `Menú: 
+                        1 - Opción A
+                        2 - Opción B
+                        3 - Opción C
+                        4 - Opción D
+                        5 - Fin
+                        `; 
+            let msj = "";
+            do{
+                num = Number(prompt(msj + "\n\nIngresa una opción:"));
+                switch(num){
+                    case 1:
+                        msj = "Opción A";
+                        break;
+                    case 2:
+                        msj = "Opción B";
+                        break;
+                    case 3:
+                        msj = "Opción C";
+                        break;
+                    case 4:
+                        msj = "Opción D";
+                        break;
+                    default:
+                        if(num == 5){ 
+                            msj = "Programa finalizado"; 
+                        }
+                        else { 
+                            alert("Ese número no está en el rango!!"); 
+                        }
+                }
+            } while( num != 5 )
+            el.innerText = msj;
+        }
+     
+        // 10. Pedimos números hasta recibir un 0
+            // Si suma par (0 cuenta como par) -> repite
+            // Si suma impar -> acaba el programa
+        function ej10(){
+            let el = document.getElementById("ej-10-resultados");
+            let num = 0;
+            let suma = 0;
+            do{
+                num = Number(prompt("Introduce un número:"))
+                suma += num;
+            } while( suma % 2 == 0 )
+            el.innerText = "Suma: " + suma;
+        }
