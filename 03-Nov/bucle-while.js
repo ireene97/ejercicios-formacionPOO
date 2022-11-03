@@ -96,11 +96,72 @@ function ej5(){
 }
 
     // 6. Pedimos número con prompt hasta recibir 0 y devolvemos suma 
+    function ej6(){
+        let el = document.getElementById("ej-6-resultados")
+        let suma = 0
+        let num = 0
+        do{
+            num = Number(prompt("Ingresa un número:"))
+            suma += num
+        } while ( num != 0 )
+        el.innerText = "Suma: " + suma
+    }
 
     // 7. Similar pero calculamos min y max de la lista de números 
+    function ej7(){
+        let el = document.getElementById("ej-7-resultados");
+        let arr = [];
+        let min = 0;
+        let max = 0;
+        let num = 0;
+        do{
+            num = Number(prompt("Ingresa un número:"));
+            if( num != 0 ){
+                arr.push(num)
+        }
+            console.log(arr)
+        }while( num != 0 )
+
+        // Buscamos mínimo
+        min = arr[0]
+        max = arr[0]
+        // Observación: arrojar alert cuando no haya 2 elementos en array
+            // Idea: si no hay elemento en arr -> alert "no se pude calcular min o max"
+            // Idea: si hay 1 elemento -> o bien mismo alert o bien min = max = arr[0]
+        for( let i = 1; i<arr.length; i++ ){
+            if(arr[i] < min ){
+            min = arr[i]}
+            //console.log(min)
+            if(arr[i] > max ){
+                max = arr[i]}
+            //console.log(max)
+        }
+
+       
+        // Math.max() y Math.min()
+            // Usando Math y el operador spread "..." conseguimos lo mismo:
+        //max = Math.max(...arr)
+        //min = Match.min(...arr)
+
+        el.innerText = "Mín: " + min + " y Máx: " + max;
+    }
 
     // 8. Similar pero solo aceptamos pares. Si impar -> break; 
         // Devolvemos número de pares recibidos 
+    function ej8(){
+        let el = document.getElementById("ej-8-resultados");
+        let num = 0;
+        let pares = 0
+            do{
+                num = Number(prompt("Ingresa un número par:"));
+                if( num % 2 == 0 ){
+                    pares++
+                    console.log(pares)
+            }
+            }while( num % 2 == 0 )
+            el.innerText = "Pares: " + pares
+        }
+
 
     // 9. Pedimos número y mostramos menú
         // Mostramos opción recibida del 1 a la N (según menú)
