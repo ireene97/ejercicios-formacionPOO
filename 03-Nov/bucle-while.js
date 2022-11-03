@@ -163,12 +163,25 @@ function ej5(){
         }
 
 
-    // 9. Pedimos número y mostramos menú
+    // 9. mostramos menú y pedimos número
         // Mostramos opción recibida del 1 a la N (según menú)
         // Cualquier número (en rango) muestra la opción 
             // Si no está en rango -> ERROR 
         // N acaba el programa 
-    
+        let el = document.getElementById("ej-8-resultados");
+        const menu = 
+                `Menú:
+                1 - Opción A
+                2 - Opción B
+                3 - Opción C
+                4 - Opción D
+                5 - Fin
+                `
+        let num = 0 
+        do{
+            num = Number(prompt("Ingresa una opción:"));
+        }while( num > 0 && num < 5 )
+        el.innerText = ""
     // 10. Pedimos número hasta recibir un 0 
         // Si suma par (0 cuenta como par) -> repite 
         // Si suma impar -> acaba el programa
