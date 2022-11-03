@@ -14,12 +14,28 @@ function ej1(){
     // si recibimos 0-9 -> true o "V"
     // else return false o "F"
 function ej2(){
-
+    let el = document.getElementById("ej-2-resultados")
+    let input = document.getElementById("input-2").valueAsNumber
+    let arr = ["F", "V"]
+    if( input >= 0 && input <=9){
+        el.innerText = arr[1]
+    }else{
+        el.innerText = arr[0]
+    }
 }
 
 // 3. fn sumaLista(arr) -> return de suma de Numbers
 function ej3(){
-
+    let el = document.getElementById("ej-3-resultados")
+    let num = 0
+    let arr = []
+    let suma = 0 
+    do{
+        num = Number(prompt("Introduce número. \n 0 para terminar"))
+        arr.push(num)
+        suma += num
+    }while ( num != 0 )
+    el.innerText = "Suma: " + suma
 }
 
 // 4. Guardar números en array 
