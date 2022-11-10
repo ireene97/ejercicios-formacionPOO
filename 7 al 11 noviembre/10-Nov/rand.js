@@ -62,3 +62,7 @@ function generarRandsConSet(n, max){
 }
 
 // Ej: vamos a cambiar esta funció a arrow 
+
+// Ej: función para promediar notas -> recibe arr y calcula num 
+    // promedio de notas con pesos -> pasamos notas y pesos (dos arr) -> salida: nota 
+// Ej: recibe segundo param para colocar (1, 2) decimales -> string
