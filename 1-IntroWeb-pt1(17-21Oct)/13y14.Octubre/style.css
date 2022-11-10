@@ -1,0 +1,30 @@
+.header{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: purple;
+    background-color: black;
+    text-align: center;
+    margin: 10px;
+}
+
+.fondo{
+    background-color: rgb(178, 158, 158);
+    border: 1px solid black;
+    margin: none
+}
+
+p{
+    text-align: center;
+    font-style: italic; 
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.titulos{
+    font-family: sans-serif;
+    color: blue;
+    text-decoration: underline;
+}
+
+.text{
+    font-family: Century gothic, sans-serif;
+    font-style: normal;
+}

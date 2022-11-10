@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Qué podemos hacer con JavaScript?</h2>
+
+<p id="demo">JavaScript puede cambiar el contenido en HTML.</p>
+
+<button type="button" onclick='document.getElementById("demo").innerHTML = "Hola JavaScript!"'>Click Me!</button>
+
+<!--JS acepta comilla y comillas doble-->
+
+<button type="button" onclick="document.getElementById('demo').innerHTML = 'Hola con una comilla'">Click aquí!</button>
+
+<p>JavaScript can change HTML attribute values.</p>
+
+<p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+
+<button onclick="document.getElementById('myImage').src='bombilla1.gif'">Turn on the light</button>
+
+<img id="myImage" src="bombilla.gif" style="width:100px">
+
+<button onclick="document.getElementById('myImage').src='bombilla.gif'">Turn off the light</button>
+
+</body>
+</html>

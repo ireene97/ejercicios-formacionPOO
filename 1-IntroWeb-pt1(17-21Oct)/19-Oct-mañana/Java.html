@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Temas de Javascript</title>
+</head>
+<body>
+    <h1>Javascript</h1>
+    <p class="lead">Temas en <a href="https://www.w3schools.com/js/default.asp" target="_blank">Intro a JS</a></p>
+    
+    <h2>Salida de Datos en JS</h2>
+    <!-- document.getElementById -->
+    <div class="descripcion">
+        <h3>document.getElementById - Caso de Uso:</h3>    
+        Siempre que queramos encontrar un elemento identificado por id en el HTML.
+        Si hubiese mas de uno con ese id, encuentra el primero.
+        Devuelve el elemento HTML o 'null' si no lo encuentra.
+    </div>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+
+    <div id="div"></div>
+    
+    <!-- document.write() -->
+    <div class="descripcion">
+        <h3>document.write() - Caso de Uso:</h3>    
+        Cuando queramos escribir una salida de datos, texto, etc. en la página.
+        <strong>Importante: </strong> Si se usa 'document.write()' con la página cargada se sobreescribe el contenido.
+        Devuelve el contenido que estamos pasando a document.write() ya sea texto o HTML.
+    </div>
+    <p>Este texto es de ejemplo.</p>
+    
+    <!-- window.alert() -->
+    <div class="descripcion">
+        <h3>window.alert() - Caso de Uso:</h3>    
+        Sirve para mostrar notificaciones que se deben confirmar para continuar.
+        Coloca el dato que le pasemos como texto en la caja de notificación y podemos usar 'alert()'.
+    </div>
+
+    <!-- console.log() -->
+    <div class="descripcion">
+        <h3>console.log() - Caso de Uso:</h3>    
+        Muestra avisos o mensajes en consola para los desarrolladores -> solo se ve en la consola.
+        También existen 'console.warn()' para warning, 'console.error()' para errores y 'console.info()' es similar a 'console.log()'.
+    </div>
+
+    <!-- window.print() -->
+    <div class="descripcion">
+        <h3>window.print() - Caso de Uso:</h3>    
+        Abre las opciones de impresión en la página actual.
+    </div>
+
+    <hr>
+    <h2>Declaraciones (statements) en JS</h2>
+    
+    <div>
+    <p class="inline">Suma: </p>
+    <p id="suma" class="inline"></p>
+    </div>
+    
+    
+    <p id="demo" class="border-bottom"></p>
+    <p id="demo2" class="border-bottom"></p>
+    <p id="demo3" class="border-bottom"></p>
+
+    <h3>Cómo escapar caracteres en HTML</h3>
+    
+    <p>Esto es la etiqueta &lt;p&gt;</p>
+    
+    <pre>
+        &lt;p&gt;
+    </pre>
+
+    <code>
+        &lt;p&gt;
+    </code>
+    <hr>
+
+    <h2>Ejercicio</h2>
+    <p class="descripcion">
+        Vamos a crear elementos (divs, p...) que presenten el 
+        resultado de las cuatro operaciones básicas de algunas 
+        variables.
+    </p>
+      
+    <div  class="solucion">
+        <h3>Solucion:</h3>
+    
+    <p id="suma1" class="inline">Suma:</p>
+    <p id="resta" class="inline">Resta:</p>
+    <p id="multiplicacion" class="inline">Multiplicación:</p>
+    <p id="division" class="inline">División:</p>
+    </div>
+
+    <h3>Salida de datos de document.write():</h3>
+
+    <script src="script.js"></script>
+</body>
+</html>

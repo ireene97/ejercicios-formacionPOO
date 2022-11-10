@@ -1,0 +1,271 @@
+/* Hoja de estilos para aplicar Flex box */
+
+/* Setup  inicial de las cajas div en el container */
+body, html {
+    margin: 0;
+}
+body {
+    background-color: rgba(165, 102, 228, 0.792);
+    padding: 10px;
+    font-family: 'Mukta', sans-serif;
+}
+
+body a, ul{
+    color:rgb(103, 0, 141);
+    font-weight: 600;
+}
+ul{
+    list-style-type: square;
+}
+
+/* Clase genérica para los divs en container */
+.flex-item {
+    border: 1px solid black;
+    font-size: 0.8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 10vw;
+    min-width: 50px;
+    background-color: rgb(231, 237, 110);
+}
+.flex-item p {
+    border: 1px dashed blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+h1{
+    text-align: center;
+    text-decoration: underline;
+    font-size: 3em;
+}
+
+h2 {
+    color:rgb(60, 4, 58);
+    font-family: 'Mukta', sans-serif;
+    font-size: 2em;
+}
+h3{
+    color: rgb(60, 4, 58);
+    font-family: 'mukta', sans-serif;
+    font-size: 1em
+}
+/* Flex box */
+
+.flex-container, 
+.h-flex-start-container,
+.h-center-container,
+.h-flex-end-container {
+    border: 2px dashed brown;
+    font-family: 'Mukta', sans-serif;
+    display: flex;
+    padding: 10px;
+}
+/* Horizontal */
+.h-flex-start-container {
+    justify-content: flex-start;
+}
+.h-center-container {
+    justify-content: center;
+}
+.h-flex-end-container {
+    justify-content: flex-end;
+}
+
+/* Vertical */
+.v-flex-start-container, 
+.v-flex-end-container,
+.v-center-container {
+    border: 2px dashed brown;
+    font-family: 'Mukta', sans-serif;
+    display: flex;
+    padding: 10px;
+    height: 20vh;
+}
+.v-flex-start-container div, 
+.v-flex-end-container div,
+.v-center-container div {
+    height: 25px;
+}
+
+.v-flex-start-container{
+    align-items: flex-start;
+}
+.v-center-container {
+    align-items: center;
+}
+.v-flex-end-container {
+    align-items: flex-end;
+}
+
+/* Horizontal y Vertical */
+.vh-flex-start-container, 
+.vh-flex-end-container,
+.vh-center-container {
+    border: 2px dashed brown;
+    font-family: 'Mukta', sans-serif;
+    display: flex;
+    padding: 10px;
+    height: 40vh;
+}
+.vh-flex-start-container div, 
+.vh-flex-end-container div,
+.vh-center-container div {
+    height: 50px;
+}
+.vh-flex-start-container {
+    justify-content: flex-start;
+    align-items: center;
+    /* flex-direction: row-reverse */
+}
+.vh-center-container {
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: row-reverse */
+}
+.vh-flex-end-container {
+    justify-content: flex-end;
+    align-items: baseline;
+    /* flex-direction: row-reverse */
+}
+
+/* Columnas */
+.col-flex-start-container,
+.col-center-container,
+.col-flex-end-container{
+    border: 2px dashed brown;
+    font-family: 'Mukta', sans-serif;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    height: 300px;
+}
+
+.col-flex-start-container {
+    /* flex-direction:column intercambia 
+    el comportamiento de estas propiedades */
+    align-items: flex-start; /* horizontal */
+    justify-content: center; /* vertical */
+    /* flex-direction: column-reverse; */
+}
+.col-center-container {
+    align-items: center; /* horizontal */
+    justify-content: center; /* vertical */
+    /* flex-direction: column-reverse; */
+}
+.col-flex-end-container {
+    align-items: center;
+    justify-content: baseline;
+    /* flex-direction: column-reverse; */
+}
+
+/* Estilos para las otras páginas de subtemas */
+.home-link {
+    margin: 10px;
+    
+    /* border: 1px dashed white; */
+    display: flex;
+    justify-content: flex-end;
+}
+.home-link a {
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* Wrap */
+.wrap-container,
+.no-wrap-container {
+    border: 2px dashed brown;
+    font-family: 'Mukta', sans-serif;
+    display: flex;
+    padding: 10px;
+    flex-direction: row;
+    height: 300px;
+}
+.wrap-container .flex-item, 
+.no-wrap-container .flex-item {
+    height: 5vh;
+    width: 5vw;
+    font-size: 0.6em;
+}
+.wrap-container {
+    flex-wrap: wrap;
+}
+.no-wrap-container {
+    flex-wrap: nowrap;
+    /* align-items: stretch; */ /* Comportamiento por defecto
+                                    los divs intentan abarcar todo el espacio
+                                    dentro del container */
+}
+
+/* Order */
+.order-flex-start-container {
+    border: 2px dashed brown;
+    font-family: 'Mukta', sans-serif;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    height: 300px;
+}
+.order-flex-start-container .flex-item {
+    width: unset;
+}
+.order-flex-start-container {
+    display: flex;
+    align-items: stretch;
+    justify-content: center; 
+}
+
+/* Shrink y Grow */
+
+.shrink-grow-container {
+    border: 2px dashed brown;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    padding: 10px 0;
+    /* flex-direction: column; */
+    height: 150px;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.shrink-grow-container .flex-item {
+    /* width: 5vw; */
+    height: 5vh;
+    min-width: unset;
+}
+
+/* Galería Responsive */
+
+#galeria-container{
+    /*border: 1px solid black;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px;
+}
+
+.img-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 95vw;
+    padding: 10px;
+    /*border: 1px solid black;*/
+}
+
+.img-item{
+    min-width: 100px;
+    max-width: 100%;
+    padding: 10px;
+    margin: 10px;
+}

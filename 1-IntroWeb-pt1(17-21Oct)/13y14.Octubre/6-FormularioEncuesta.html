@@ -1,0 +1,80 @@
+<!--Ejercicio 1 de la Certificación FreeCodeCamp de (New) Responsive Web Design-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="formulario.css">
+</head>
+<body>
+    <h1 id="title">Survey Form</h1>
+        <p id="description">Esto es un formulario de ejemplo para practicar HTML.</p>
+
+<form id="survey-form" action>
+   
+    <!--Label es ETIQUETA-->
+<div>    
+    <label for="name" id="name-label" >Nombre:</label><br>
+    <input id="name" type="text" value="" placeholder="Ingresa tu nombre..." required>
+</div>   
+
+<div>
+    <label for="email" id="email-label" >Email</label><br>
+    <input id="email" type="email" placeholder="email@dominio.com" required>
+</div>
+
+    <!--Seguimos con los pasos 6-10-->
+<div><br>
+    <label id="number-label" >Edad</label><br>
+    <input id="number" type="number" min="1" max="200" step="1" placeholder="30" required>
+</div>
+
+    <!--Dropdown o menú desplegable-->
+<div><br>
+    <label>Lenguaje de programación favorito:</label><br>
+    <select id="dropdown"> <!--Selected para que salga esa como primera opción?-->
+        <option>JavaScript</option>
+        <option selected>Python</option>
+        <option disabled>Serpent</option>
+        <option>C</option>
+        <option>C++</option>
+    </select>
+</div>
+
+    <!--Radio buttons-->
+<div><br>
+    <label>Has usado VS Code alguna vez?</label><br>
+        <!--Agrupación de opciones mismo name-->
+    <input type="radio" name="vs-code" value="si"><label class="label-inline">Sí</label><br>
+    <input type="radio" name="vs-code" value="no"><label class="label-inline">No</label><br>
+    <input type="radio" name="vs-code" value="otro"><label class="label-inline">No lo sé</label>
+</div>
+
+    <!--Checkboxes-->
+<div><br>
+    <label>Estás aprendiendo HTML?</label><br>
+    <input type="checkbox" value="si"><label class="label-inline">Sí</label><br>
+    <input type="checkbox" value="no"><label class="label-inline">No</label><br>
+    <input type="checkbox" value="maybe"><label class="label-inline">Es posible</label>
+</div>
+
+<div><br>
+    <label id="comentarios">Comentarios adicionales</label><br>
+    <textarea id="v3review" name="w3review" rows="5" cols="40">Escribe aquí un texto...</textarea>
+</div>        
+<div><br>
+    <button id="submit">Enviar</button>
+</div>
+    <!--Así lo ha hecho el
+<div><br>
+    <input type="submit" id="submit" value="Envia tu formulario">
+</div>
+-->
+
+
+</form>
+</body>
+</html>

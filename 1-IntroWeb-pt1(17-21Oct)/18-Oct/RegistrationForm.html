@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de registro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Formulario de registro</h1>
+        <p>Por favor rellene este formulario con la información requerida</p>
+<form action="Escritorio">
+<fieldset>
+    <label for="primer-nombre">Primer nombre: <input id="primer-nombre" type="text" required></label>
+    <label for="apellidos">Apellidos: <input id="apellidos" type="text" required></label>
+    <label for="email">Dirección de correo electrónico: <input id="email" type="email" required></label>
+    <label for="password">Crea una nueva contraseña: <input id="password" type="password" pattern="[a-zA-Z0-5]{8,}" placeholder="*********" required></label>
+</fieldset>
+<fieldset>
+    <label for="cuenta-personal"><input id="cuenta-personal" type="radio" name="tipo-cuenta" class="inline" required> Cuenta personal</label>
+    <label for="cuenta-negocio"><input id="cuenta-negocio" type="radio" name="tipo-cuenta" class="inline" required> Cuenta de negocios</label>
+    <label for="terminos"><input id="terminos" type="checkbox" name="terminos" class="inline"> Acepto los <a href="https://www.freecodecamp.org/news/terms-of-service/">términos y condiciones</a></label>
+</fieldset>
+<fieldset>
+    <label for="foto-perfil">Sube tu foto de perfil: <input id="foto-perfil" type="file" name="file"></label>
+    <label for="edad">Que edad tienes? <input id="edad" type="number" name="edad" min="13" max="120"></label>
+    <label for="referencia">Como nos has conocido? 
+        <select id="referencia" name="referencia">
+            <option value=" ">(Selecciona una)</option>
+            <option value="1">freeCodeCamp News</option>
+            <option value="2">freeCodeCamp YouTube Channel</option>
+            <option value="3">freeCodeCamp Forum</option>
+            <option value="4">Otros</option>
+        </select>
+    </label>
+    <label for="bio">Proporciona una biografía: <textarea id="bio" name="bio" rows="3" cols="30" placeholder="Me gusta programar en la playa..."></textarea></label>
+</fieldset>
+<input type="submit" value="Enviar"/>
+</form>
+</body>
+</html>

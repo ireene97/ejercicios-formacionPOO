@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Temas de Javascript</title>
+</head>
+<body>
+    <h1>Javascript</h1>
+    <p class="lead">Temas en <a href="https://www.w3schools.com/js/default.asp" target="_blank">Intro a JS</a></p>
+    
+    <!-- <h2>Salida de Datos en JS</h2> -->
+    <!-- document.getElementById -->
+    <!-- <div class="descripcion">
+        <h3>document.getElementById - Caso de Uso:</h3>    
+        Siempre que queramos encontrar un elemento identificado por id en el HTML.
+        Si hubiese mas de uno con ese id, encuentra el primero.
+        Devuelve el elemento HTML o 'null' si no lo encuentra.
+    </div> -->
+
+    <h2>Ejercicio 1</h2>
+    <div class="descripcion">
+        <ul>
+            <li>Pedir un dato al usuario y comprobar si es mayor de edad</li>
+            <li>Comprobar qué día es y sacar un mensaje personalizado en cada caso</li>
+            <li>Pedir dos datos para realizar una división -> comprobar que el divisor 
+                (segundo número en a / b sería la b) no es cero 
+                a / 0 // Infinity -> no es número</li>
+        </ul>
+    </div>
+    
+    <hr>
+<!-- Apartado A -->
+    <div class="solucion">
+    <h3>A. solución:</h3>
+    <div class="algo">
+        <h4>Método de resolución</h4>
+        <ul>
+            <li>Usamos 'prompt()' para pedir el dato -> Número // edad</li>
+            <li>Bucle if -> Comprobamos si es &gt; 18 -> Escribimos mensaje</li>
+            <li>else -> Escribimos otro mensaje</li>
+        </ul>
+    </div>
+        <div id="sol-a" class="sol"></div>
+    </div>
+    
+    <hr>
+
+    <!-- Apartado B -->
+    <div class="solucion">
+        <h3>B solución:</h3>
+        <div class="algo">
+            <h4>Método de resolución</h4>
+            <ul>
+                <li>Creamos bucle o varios con if, else if, else para comprobar los 7 días</li>
+                <li>Añadimos operador || para verificar minúsculas</li>
+                <li>Si hay una falta ortográfica hay un mensaje por defecto en else</li>
+            </ul>
+        </div>
+            <div id="sol-b" class="sol"></div>
+    </div>
+        
+        <hr>
+    
+    <!-- Apartado C -->
+        <div class="solucion">
+            <h3>C. solución:</h3>
+            <div class="algo">
+                <h4>Método de resolución</h4>
+                <ul>
+                    <li>Pedimos los valores como en un ejercicio anterior con 'prompt'</li>
+                    <li></li>
+                    <li>3</li>
+                    <li>4</li>
+                </ul>
+            </div>
+                <div id="sol-c" class="sol"></div>
+        </div>
+        <div class="center">
+            <p id="divi"  class="inline">División: </p>
+        </div>
+            <hr>
+    
+           
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

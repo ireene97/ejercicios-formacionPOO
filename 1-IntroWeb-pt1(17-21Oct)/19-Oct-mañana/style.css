@@ -1,0 +1,41 @@
+/* Hoja de Estilos Externa */
+
+/* Test
+h1{
+    color:red;
+} */
+
+/***************************/
+body {
+    padding: 10px;
+    background-color: rgb(204, 229, 244);
+}
+h1 {
+    text-align: center;
+}
+.lead {
+    text-align: center;
+}
+.descripcion{
+    background-color: rgb(159, 223, 232);
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px auto;
+    width: 80%;
+}
+.solucion{
+    width: 60%;
+    padding: 10px;
+    background-color: rgba(75, 205, 234, 0.363);
+    margin: 10px auto;
+}
+
+
+.inline{
+    display: inline-block;
+    padding: 0 5px;
+}
+.border-bottom{
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
