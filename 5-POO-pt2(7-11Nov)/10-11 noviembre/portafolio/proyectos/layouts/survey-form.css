@@ -1,0 +1,63 @@
+body{
+    background-color: rgb(170, 160, 57);
+    font-family: "tahoma", sans-serif;
+}
+
+h1, p{
+text-align: center;
+color: rgb(85, 78, 0);
+padding: 0.7em 0;
+}
+
+form{
+    border: 1px solid black;
+    text-align:center;
+    margin:0 auto;
+    width: 70vw;
+    max-width: 500px;
+    min-width: 400px;
+}
+
+::placeholder{
+    color:gray;
+    opacity: 20;
+}
+
+input,select{
+    background-color: rgb(255, 248, 170); 
+    border:none; 
+    padding: 0 5px;
+}
+
+.label-inline{
+    display:inline-block;
+    width: 49%;
+    text-align: left;
+}
+
+input[type="radio"]{
+    width: 7%;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+input[type="checkbox"]{
+    width: 7%;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+div{
+    width:50%;
+    padding: 10px 0;
+    margin: 10px auto;
+}
+
+textarea{
+    min-width: 200px;
+    max-width: 300px;
+    width: 350px;
+}
+
+
+

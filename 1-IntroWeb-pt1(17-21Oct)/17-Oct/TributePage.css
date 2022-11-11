@@ -1,11 +1,8 @@
 img{
     display: block;
-    padding-left: 22%;
+    margin: 0 auto;
   }
   
-  #image{
-    max-width:100%;
-  }
   h1{
     color: rgb(30, 84, 95);
     text-decoration: underline;
