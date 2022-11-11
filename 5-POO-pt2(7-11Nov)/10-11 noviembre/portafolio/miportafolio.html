@@ -1,35 +1,39 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Irene Lolo | Desarrollador Web</title>
-    <link rel="icon" href="hero-banner.png"> <!-- Colocad PNG con transparencia -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Irene Lolo | Desarrollador Web</title>
+  <link rel="icon" href="hero-banner.png"> <!-- Colocad PNG con transparencia -->
+  <!-- Bootstrap 5.2.2. -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <!-- Fontawesome v6 -->
+  <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+  <!-- Hoja personalizada -->
+  <link rel="stylesheet" href="portafolio.css">
+</head>
 
-  <body>
-    <!-- Navbar -->
-    <header>
-        <!-- Fixed navbar -->
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img class="bi me-2" src="logo.png" width="80" alt="logo">
-                <span>Irene Lolo</span>
-            </a>
+<body>
+  <!-- Navbar -->
+  <header>
+    <!-- Fixed navbar -->
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img class="bi me-2" src="logo.png" width="80" alt="logo">
+            <span>Irene Lolo</span>
+          </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-              <ul class="navbar-nav me-auto mb-2 mb-md-0 mx-auto">
-                <li class="nav-item m-auto">
-                  <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                </li>
-                <li class="nav-item mx-5">
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0 mx-auto">
+              <li class="nav-item m-auto">
+                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+              </li>
+              <li class="nav-item mx-5">
                   <a class="nav-link" href="#about-me">Acerca de</a>
-                </li>
+              </li>
               <li class="nav-item mx-5">
                 <a class="nav-link" href="#portfolio">Portafolio</a>
               </li>
@@ -93,10 +97,10 @@
     </div>
   </section>
   <!-- Cols o Divs o Grid -> Proyectos -->
-    <section id="portfolio-section">
-    <div class="container px-4 py-5" id="custom-cards">
-      <h2 class="pb-2">Mis proyectos</h2>
-      <p class="lead">Algunos de los proyectos en los que he trabajado recientemente.</p>
+  <section id="portfolio-section">
+    <div class="container px-4 pt-0 pb-5 border-bottom" id="custom-cards">
+        <h2 class="pb-2">Proyectos</h2>
+        <p class="lead mt-3">Algunos de los proyectos en los que he trabajado recientemente.</p>
   
       <!-- Slider -->
       <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true" data-bs-wrap="true">
@@ -146,8 +150,11 @@
       <div class="carousel-item active">
         <img src="https://via.placeholder.com/800x400/000/FFF?text?Slide+2" class="d-block w-100" alt="slide-4">
         <div class="carousel-caption d-none d-md-block">
-          <h5 class="display-4">Proyecto 4</h5>
-          <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque rerum molestiae veniam amet. Aliquam a fuga maiores sit mollitia! Doloremque, repellat natus maxime eius quisquam repudiandae hic labore fugit voluptatem?</p>
+          <h5 class="display-4">Navbar Responsive</h5>
+          <p class="lead">Navbar vertical con efectos.</p>
+          <div class="row col-4 my-3 mx-auto">
+            <a href="./proyectos/navbar-responsive/navbar-responsive.html" target="_blank" class="btn btn-primary px-2 mx-auto">Navbar responsive</a>
+          </div>
         </div>
       </div>
       <!-- Slide 5 -->
@@ -205,15 +212,37 @@
     </button>
     </div>
 
-    <hr>
+  <!-- Toggler -->
+  <div class="border bg bg-light">
+    <div class="container">
+      <div id="see-more-btn" class="row col-lg col-sm-10 my-5 mx-auto align-items-center justify-content-around">
 
-      <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+          <div class="col-lg-8 col-md">
+            <h3 class="">Mis Proyectos</h3>
+            <p class="lead">Los proyectos que he realizado en 2022.</p>
+          </div>
+          <div class="col-lg-4 col-md">
+            <a href="#see-more-btn" class="btn btn-success px-2 py-2 mx-auto"
+            type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" 
+            aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Mostrar proyectos">
+            Ver todos los proyectos</a>
+          </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- Área colapsable del toggler -> 9 proyectos -->
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-light p-4">
+
+      <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3 align-items-center g-5 py-5">
         
         <!-- Proyecto 1-->
         <div id="proyecto-1" class="col mb-5">
           <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('dark-3.png');">
             <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-              <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Proyecto 1</h3>
+              <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Survey Form</h3>
+              <p class="lead">Proyecto de Layout con HTML y CSS.</p>
               <ul class="d-flex list-unstyled mt-auto justify-content-around">
                 <li class="d-flex me-2">
                   <img src="mini.png" alt="Bootstrap" class="rounded-circle border border-white" width="32" height="32">
@@ -227,8 +256,8 @@
               </ul>
             </div>
           </div>
-          <div class="row col-6 my-3 mx-auto">
-            <a href="#proyectos" class="btn btn-primary px-2 mx-auto">Link a Proyecto 1</a> 
+          <div class="row project-btn col-4 col-sm col-xs my-3 mx-auto">
+            <a href="./proyectos/layouts/survey-form.html" class="btn btn-primary px-2 mx-auto">Survey Form</a> 
         </div>
         </div>
 
@@ -250,7 +279,7 @@
               </ul>
             </div>
           </div>
-          <div class="row col-6 my-3 mx-auto">
+          <div class="row project-btn col-4 col-sm col-xs my-3 mx-auto">
             <a href="#proyectos" class="btn btn-primary px-2 mx-auto">Link a Proyecto 2</a> 
         </div>
         </div>
@@ -273,7 +302,7 @@
               </ul>
             </div>
           </div>
-          <div class="row col-6 my-3 mx-auto">
+          <div class="row project-btn col-4 col-sm col-xs my-3 mx-auto">
             <a href="#proyectos" class="btn btn-primary px-2 mx-auto">Link a Proyecto 3</a> 
         </div>
         </div>
@@ -296,7 +325,7 @@
               </ul>
             </div>
           </div>
-          <div class="row col-6 my-3 mx-auto">
+          <div class="row project-btn col-4 col-sm col-xs my-3 mx-auto">
             <a href="#proyectos" class="btn btn-primary px-2 mx-auto">Link a Proyecto 4</a> 
         </div>
         </div>
@@ -319,7 +348,7 @@
               </ul>
             </div>
           </div>
-          <div class="row col-6 my-3 mx-auto">
+          <div class="row project-btn col-4 col-sm col-xs my-3 mx-auto">
             <a href="#proyectos" class="btn btn-primary px-2 mx-auto">Link a Proyecto 5</a> 
         </div>
         </div>
@@ -342,7 +371,7 @@
               </ul>
             </div>
           </div>
-          <div class="row col-6 my-3 mx-auto">
+          <div class="row project-btn col-4 col-sm col-xs my-3 mx-auto">
             <a href="#proyectos" class="btn btn-primary px-2 mx-auto">Link a Proyecto 6</a> 
         </div>
         </div>
@@ -365,7 +394,7 @@
               </ul>
             </div>
           </div>
-          <div class="row col-6 my-3 mx-auto">
+          <div class="row project-btn col-4 col-sm col-xs my-3 mx-auto">
             <a href="#proyectos" class="btn btn-primary px-2 mx-auto">Link a Proyecto 7</a> 
         </div>
         </div>
@@ -388,7 +417,7 @@
               </ul>
             </div>
           </div>
-          <div class="row col-6 my-3 mx-auto">
+          <div class="row project-btn col-4 col-sm col-xs my-3 mx-auto">
             <a href="#proyectos" class="btn btn-primary px-2 mx-auto">Link a Proyecto 8</a> 
         </div>
         </div>
@@ -411,14 +440,19 @@
               </ul>
             </div>
           </div>
-          <div class="row col-6 my-3 mx-auto">
+          <div class="row project-btn col-4 col-sm col-xs my-3 mx-auto">
             <a href="#proyectos" class="btn btn-primary px-2 mx-auto">Link a Proyecto 9</a> 
         </div>
         </div>
+
+      </div>
+    </div>
+  </div>
+  </div>
   </section>
 
     <!-- Contacto (form) -->
-  <section id="contact">
+  <!-- <section id="contact">
     <div class="container col-4 col-sm-6 py-3 mt-3">
       <form>
         <h2 class="h3 mb-3 display-6 fw-normal">Contacto</h2>
@@ -445,24 +479,50 @@
         <p class="mt-5 mb-3 text-muted">© Irene Lolo 2022</p>
       </form>
     </div>
+  </section> -->
+
+  <section id="contact">
+    <div class="container">
+      <div class="row my-5 px-3 py-3 align-items-center justify-content-center">
+        
+        <div class="col-lg-3 col-xl-4 px-2 mx-1 col-md col-sm order-1 text-center">
+          <a class="btn btn-primary d-inline-block mx-auto"
+          href="mailto:email@dominio.com?subject='Información servicios de desarrollo web&body=Hola, quiero saber más sobre los diseños y páginas web que has creado...'"
+          target="_blank">
+          <i class="far fa-envelope"></i> Enviar e-mail
+          </a>
+        </div>
+
+        <div class="col-lg-7 col-xl-6 px-2 mx-1 col-md col-sm order-0 text-end">
+          <h2>Contacto</h2>
+          <p class="lead">Envíame un mensaje por email.</p>
+        </div>
+
+      </div>
+      
+    </div>
   </section>
     <!-- Footer -->
-    <div class="container-fluid bg bg-dark py-3">
-      <footer class="d-flex flex-wrap justify-content-between align-items-center pt-3 mt-4">
-        <a href="#" class="nav-link px-5">
+    <div class="container-fluid bg bg-dark pt-3 pb-5">
+        
+      <footer class="d-flex flex-wrap justify-content-between col-10 col-sm mx-auto align-items-center pt-3 mt-4">
+        
+        <ul class="d-flex col-sm col-md-10 col-lg-10 col-xl-10 justify-content-center mx-auto my-3 pt-2 px-0">
+          <li class="nav-item rounded py-1 px-1 m-1 small"><a href="#" class="nav-link px-4 py-2 border border-secondary rounded text-muted">Inicio</a></li>
+          <li class="nav-item rounded py-1 px-1 m-1 small"><a href="#about-me" class="nav-link px-4 py-2 border border-secondary rounded text-muted">Acerca de</a></li>
+          <li class="nav-item rounded py-1 px-1 m-1 small"><a href="#portfolio" class="nav-link px-4 py-2 border border-secondary rounded text-muted">Proyectos</a></li>
+          <li class="nav-item rounded py-1 px-1 m-1 small"><a href="#contact" class="nav-link px-4 py-2 border border-secondary rounded text-muted">Contacto</a></li>
+        </ul>
+        
+        <a href="#" id="logo" class="nav-link px-5 mx-auto">
           <img src="logo.png" alt="logo">
           <span class="col-md-4 mb-0 text-muted">© 2022 Irene Lolo</span>
         </a>
 
-        <p class="text-muted fw-bold pt-3 col-md-6 col-lg-8 px-5 col-sm text-end">
+        <p class="text-muted fw-bold pt-3 col-md-6 col-lg-8 px-5 col-sm mx-auto">
           Diseño de páginas web a medida con diversos frameworks. Desarrollo Full-stack de plataformas web.</p>
 
-        <ul class="d-flex col-sm col-md-8 col-lg-6 col-xl-6 justify-content-around mx-auto my-3 pt-2 border-top border-secondary">
-          <li class="nav-item rounded py-1 px-1 m-1 small"><a href="#" class="nav-link px-2 text-muted">Inicio</a></li>
-          <li class="nav-item rounded py-1 px-1 m-1 small"><a href="#about-me" class="nav-link px-2 text-muted">Acerca de</a></li>
-          <li class="nav-item rounded py-1 px-1 m-1 small"><a href="#portfolio" class="nav-link px-2 text-muted">Proyectos</a></li>
-          <li class="nav-item rounded py-1 px-1 m-1 small"><a href="#contact" class="nav-link px-2 text-muted">Contacto</a></li>
-        </ul>
+        
         <!-- Redes sociales -->
         <!-- <ul class="d-flex col-sm col-md-8 col-lg-6 col-xl-6 justify-content-around mx-auto my-3">
           <li><i class="bi bi-linkedin text-muted">Linkedin</i></li>
@@ -474,7 +534,7 @@
     </div>
 
     <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe23+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <!-- Si vamos a usar Popper -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script> -->

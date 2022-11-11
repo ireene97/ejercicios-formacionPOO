@@ -1,0 +1,128 @@
+/* Hoja de estilos para aplicar Flex box 
+*  Aplicamos esta hoja de estilos a contenido HTML de temas
+*/
+
+/* Setup  inicial de las cajas div en el container */
+body, html {
+    margin: 0;
+}
+body {
+    background-color: rgba(168, 184, 186, 0.505);
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+body a, ul {
+    color: black;
+    /* color: rgb(228, 228, 228); */
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+h1 {
+    text-align: center;
+}
+h1, h2, h3 {
+    color: #46810e;
+    /* color: rgb(104, 55, 55); */
+}
+ul {
+    list-style-type:decimal-leading-zero;
+}
+/****************************************/
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#operadores, #asignacion, #tipos {
+    font-family: 'Open Sans', sans-serif;
+}
+
+#conversor-container {
+    display: flex;
+    justify-content: space-around;
+}
+#conversor-container div {
+    border: 3px solid rgb(33, 51, 189);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+#conversor-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+#conversor-container code {
+    font-size: 1.2em;
+    padding: 0px 10px;
+    margin: 0px 0px;
+    background-color: rgb(130, 121, 121);
+}
+#conversor-container div {
+    background-color: rgba(142, 201, 237, 0.865);
+    max-width: 50vw;
+    margin: 0 auto;
+}
+#conversor-container p,
+#conversor-container div,
+#conversor-container input,
+#conversor-container select,
+#conversor-btn {
+    display: block;
+    margin: 10px auto;
+    width: 95%;
+    min-height: 1.75em;
+    padding: 3px 0;
+    text-align: center;
+}
+#conversor-container input {
+    padding: 0;
+}
+#conversor-container textarea {
+    display: block;
+    margin: 10px auto;
+    width: 90%;
+    padding: 10px;
+    text-align: center;
+}
+#conversor-container, 
+#conversor-container div {
+    padding: 15px 5px;
+}
+#conversor-btn {
+    background-color: rgba(19, 19, 180, 0.89);
+    color: white;
+    box-shadow: 0;
+    border: 0;
+    border-radius: 5px;
+    margin: 20px auto 10px;
+    width: 50%;
+    padding: 10px;
+}
+
+#resultados {
+    font-size: 3em;
+    display: inline-block;
+    align-self: center;
+    background-color: rgba(128, 247, 48, 0.315)!important;
+}
+
+/* Media Query */
+
+@media (width > 800px){
+    #conversor-container div{
+        max-width: 450px;
+        padding: 15px;
+    }
+}
+
+@media (width < 800px){
+    #resultados{
+        font-size: 2em;
+    }
+}
