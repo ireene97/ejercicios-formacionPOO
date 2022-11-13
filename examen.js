@@ -20,3 +20,8 @@ function suma (){
 }
 
 const fun = (a, b) => { return a + b }
+
+function ej(){
+    let text = document.getElementById("resultado")
+    
+}
