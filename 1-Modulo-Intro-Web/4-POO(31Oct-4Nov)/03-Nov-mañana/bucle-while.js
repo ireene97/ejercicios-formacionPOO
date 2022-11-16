@@ -69,7 +69,7 @@ function ej4(){
     if(esPrimo){
     el.innerText = "Es número primo."
     } else {
-        el.innerText = "El número no es primo "
+        el.innerText = "El número no es  "
     }
 }
 // 5. Pide una contraseña y si: 
