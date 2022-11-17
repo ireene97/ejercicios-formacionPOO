@@ -1,0 +1,10 @@
+INSERT INTO `w3schools-sql`.`categories` (`CategoryName`, `Description`) VALUES ('Lácteos', 'Leche y derivados lácteos ');
+INSERT INTO `w3schools-sql`.`categories` (`CategoryName`, `Description`) VALUES ('Verduras', 'Vegetales frescos');
+INSERT INTO `w3schools-sql`.`categories` (`CategoryName`, `Description`) VALUES ('Cafés', 'Café molido, cápsulas, etc.');
+INSERT INTO `w3schools-sql`.`categories` (`CategoryName`, `Description`) VALUES ('Navidad', 'Productos navideños diversos (decoración, adornos, etc) ');
+INSERT INTO `w3schools-sql`.`categories` (`CategoryName`, `Description`) VALUES ('Electrónica', 'Ordenadores, periféricos, etc.');
+INSERT INTO `w3schools-sql`.`categories` (`CategoryName`, `Description`) VALUES ('Bebidas', 'Refrescos con/sin gas');
+INSERT INTO `w3schools-sql`.`categories` (`CategoryName`, `Description`) VALUES ('Panadería', 'Panes, bollos, etc. ');
+INSERT INTO `w3schools-sql`.`categories` (`CategoryName`) VALUES ('Bombillas');
+INSERT INTO `w3schools-sql`.`categories` (`CategoryName`) VALUES ('Papelería');
+INSERT INTO `w3schools-sql`.`categories` (`CategoryName`) VALUES ('Juguetes');
