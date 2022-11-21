@@ -1,0 +1,10 @@
+INSERT INTO `Categories` (`CategoryName`, `Description`) VALUES ('Lácteos', 'Leche y derivados lácteos');
+INSERT INTO `Categories` (`CategoryName`, `Description`) VALUES ('Verduras', 'Vegetales frescos');
+INSERT INTO `Categories` (`CategoryName`, `Description`) VALUES ('Cafés', 'Cafe molido, cápsulas, etc.');
+INSERT INTO `Categories` (`CategoryName`, `Description`) VALUES ('Navidad', 'Productos navideños diversos (decoración, adornos, etc.)');
+INSERT INTO `Categories` (`CategoryName`, `Description`) VALUES ('Electrónica', 'Ordenadores, periféricos, etc.');
+INSERT INTO `Categories` (`CategoryName`, `Description`) VALUES ('Bebidas', 'Refrescos con/sin gas');
+INSERT INTO `Categories` (`CategoryName`, `Description`) VALUES ('Panadería', 'Panes, bollos, etc.');
+INSERT INTO `Categories` (`CategoryName`) VALUES ('Bombillas');
+INSERT INTO `Categories` (`CategoryName`) VALUES ('Papelería');
+INSERT INTO `Categories` (`CategoryName`) VALUES ('Juguetes');
